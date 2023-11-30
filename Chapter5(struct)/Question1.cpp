@@ -35,13 +35,13 @@ int main() {
         printf("6. Thoat khoi chuong trinh\n");
         printf("Nhap lua chon cua ban: ");
         scanf("%d", &choice);
-
+         getchar();
         switch (choice) {
             case 1: {
                 printf("Nhap so sinh vien muon khoi tao danh sach: ");
                 int numInitialize;
                 scanf("%d", &numInitialize);
-
+                getchar();
                 if (numInitialize < 0 || numInitialize > MAX_STUDENTS) {
                     printf("so sinh vien khong hop le vui long nhap giua 0 va %d.\n", MAX_STUDENTS);
                     break;
@@ -154,7 +154,7 @@ int main() {
                 }
 
                 if (index == -1) {
-                    printf("Khong the tìm thay sinh vien voi ma %s.\n", id);
+                    printf("Khong the tÃ¬m thay sinh vien voi ma %s.\n", id);
                 } else {
                     printf("Da tim thay sinh vien:\n");
                     displayStudent(students[index]);
