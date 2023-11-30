@@ -31,19 +31,19 @@ void addEmployee(struct Employee employees[], int *numEmployees) {
     printf("Nhap thong tin cho nhan vien:\n");
     printf("ID: ");
     scanf("%d", &newEmployee.id);
-
+    getchar();
 
     printf("Ten: ");
     fgets(newEmployee.name, sizeof(newEmployee.name), stdin);
     newEmployee.name[strcspn(newEmployee.name, "\n")] = '\0'; 
-
+    
     printf("Chuc vu: ");
     fgets(newEmployee.position, sizeof(newEmployee.position), stdin);
     newEmployee.position[strcspn(newEmployee.position, "\n")] = '\0'; 
 
     printf("Luong: ");
     scanf("%f", &newEmployee.salary);
-  
+    getchar();
 
     employees[*numEmployees] = newEmployee;
     (*numEmployees)++;
